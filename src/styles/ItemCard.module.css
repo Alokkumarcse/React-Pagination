@@ -1,0 +1,11 @@
+.item__card {
+   display: flex;
+   flex-direction: column;
+   border: 5px solid rgb(190, 182, 182);
+   padding: 5px;
+}
+.img {
+   object-fit: contain;
+   height: 150px;
+   width: 100%;
+}
