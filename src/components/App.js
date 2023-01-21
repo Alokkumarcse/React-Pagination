@@ -77,12 +77,13 @@ function App() {
             >◀</span> 
         }
         {
-          // create new empty array of size and spread so each element is assign undefined
+          // create new empty array of size and spread so each element assign undefined by default.
           [...Array(products.length/10)].map((item, index) => {
             return (
               <span 
                 key={`${index}index`}
                 onClick={() => selectedPageHandler(index+1)}
+                className={ page === index + 1 ? `${styles.active}`: ""}
               >{index + 1} </span>
             )
           })
