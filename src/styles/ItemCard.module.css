@@ -1,19 +1,22 @@
 .item__card {
    display: flex;
    flex-direction: column;
-   border: 5px solid rgb(212, 206, 206);
+   border: 10px solid rgb(212, 206, 206);
    border-radius: 5px;
-   padding: 5px;
-   text-align: center;
+   padding: 10px;
+   background-color: rgb(219, 175, 175);
 }
 
 .title {
+   align-self: start;
    font-weight: bold;
    font-size: 12px;
 }
 
 .description {
+   text-align: start;
    font-size: 10px;
+   overflow-wrap: break-word;
 }
 
 .img {
@@ -24,6 +27,8 @@
 }
 
 .price {
+   justify-content: end;
+   align-self: flex-start;
    font-weight: bold;
    font-size:12px;
 }

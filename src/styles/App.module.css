@@ -11,20 +11,29 @@
 }
 
 .pagination {
+   margin-top: 15px;
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 5px;
+   padding: 10px;
+
 }
    .pagination>span {
-      padding:0 3px;
+      padding:0 5px;
+   }
+   .pagination>span:hover {
+      background-color: aqua;
       cursor: pointer;
    }
-   .pagination>span:active {
-      color:blue;
+   
+   .btn {
+      background-color: rgb(238, 227, 227);
    }
 
-
+   .active {
+      background-color: rgb(42, 120, 236);
+   }
+   
 @media screen and (max-width:400px){
    .products{
       display: grid;
