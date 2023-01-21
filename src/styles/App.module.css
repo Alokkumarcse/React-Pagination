@@ -1,37 +1,53 @@
 .container {
+   position: relative;
    box-sizing: border-box;
    width: 100%;
-   padding:10px;
+}
+
+.sticky {
+   position: sticky;
+   top:0;
 }
 
 .products{
    display: grid;
    grid-template-columns: repeat(3, minmax(0, 1fr));
    gap:10px;
+   padding:10px;
 }
 
 .pagination {
-   margin-top: 15px;
+   /* margin-top: 15px; */
    display: flex;
    justify-content: center;
    align-items: center;
    padding: 10px;
 
 }
-   .pagination>span {
-      padding:0 5px;
+   .pagination__span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 20px;
+      padding: 2px 2px;
+      height: 15px;
+      width: 15px;
+      border:1px solid rgb(243, 207, 207);
+      border-radius: 50%;
+      text-align: center;
    }
+
    .pagination>span:hover {
-      background-color: aqua;
+      background-color: rgb(157, 180, 180);
       cursor: pointer;
    }
-   
+
    .btn {
       background-color: rgb(238, 227, 227);
    }
 
    .active {
-      background-color: rgb(42, 120, 236);
+      background-color: rgb(61, 131, 236);
    }
    
 @media screen and (max-width:400px){

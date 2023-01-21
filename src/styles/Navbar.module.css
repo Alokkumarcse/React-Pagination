@@ -1,0 +1,19 @@
+.nav {
+   position: relative;
+   width: 100%;
+   height: 50px;
+   background-image: linear-gradient(rgb(162, 162, 218), rgb(157, 211, 157), rgb(151, 143, 141));
+   box-shadow: 0 5px 0 rgb(241, 230, 230);
+}
+
+.navbar {
+   position: sticky;
+   top:0;
+   box-sizing: border-box;
+   margin-bottom: 10px;
+   padding:5px;
+   text-align: center;
+   text-transform: capitalize;
+   font-size: 20px;
+   font-weight: bold;
+}
