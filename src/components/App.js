@@ -9,24 +9,47 @@ function App() {
   
   /** fetch data form api */
   const fetchProducts = async () => {
-    const res = await fetch('https://dummyjson.com/products');
+    const res = await fetch('https://dummyjson.com/products/?limit=100');
     const data = await res.json();
     /** set products list using setProducts(argument) method */ 
-    setProducts(data.products);
+    if(data && data.products){
+      setProducts(data.products);
+    }
   }
 
-  /** useEffect hooks to help call the fetch function and re-render the app when dependencies changed */
+  /** useEffect hooks to help call the fetch function and re-render app when dependencies[] changed */
   useEffect(() => {
     fetchProducts();
   }, []);
 
   return (
-    <div className={styles.app}>
-      {
-        products.map((item, index) => {
-          return <ItemCard thumbnail={item.thumbnail} title={item.title} key={`${index}ade`} />
-        })
-      }
+    <div className={styles.container}>
+      {/* Product list section */}
+      <section className={styles.products}>
+        {
+          products.map((item, index) => {
+            const {thumbnail, title, description, price} = item;
+            return (
+            <ItemCard 
+              key={`${index}ade`} 
+              thumbnail={thumbnail} 
+              title={title} 
+              description={description}
+              price={price}
+            />)
+          })
+        }
+      </section>
+
+      {/* pagination  */}
+      <section className={styles.pagination}>
+        <span >◀</span> 
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>   
+        <span>▶</span>    
+      </section>
+      
     </div>
   );
 }

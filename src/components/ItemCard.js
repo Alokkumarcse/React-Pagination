@@ -9,7 +9,7 @@ function ItemCard(props) {
          <span className={styles.title}>{title}</span>
          <span className={styles.description}>{description}</span>
          <img className={styles.img} src={thumbnail}  alt={title}/>
-         <span className={styles.price}>{price}</span>
+         <span className={styles.price}>MRP: {price}</span>
       </div>
    )
 }

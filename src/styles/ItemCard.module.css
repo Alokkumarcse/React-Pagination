@@ -1,11 +1,38 @@
 .item__card {
    display: flex;
    flex-direction: column;
-   border: 5px solid rgb(190, 182, 182);
+   border: 5px solid rgb(212, 206, 206);
+   border-radius: 5px;
    padding: 5px;
+   text-align: center;
 }
+
+.title {
+   font-weight: bold;
+   font-size: 12px;
+}
+
+.description {
+   font-size: 10px;
+}
+
 .img {
-   object-fit: contain;
-   height: 150px;
+   padding: 10px 0;
+   height: auto;
+   max-height: 200px;
    width: 100%;
+}
+
+.price {
+   font-weight: bold;
+   font-size:12px;
+}
+
+@media screen and (max-width:400px){
+   .img {
+      padding: 10px 0;
+      height: auto;
+      width: 70%;
+      margin: auto;
+   }
 }
